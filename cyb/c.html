@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me and Cybernetics</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #be830e; 
+        }
+
+        .header {
+            background-color: #000000;
+            padding: 20px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            min-height: 350px;
+        }
+
+        .header .corner-text {
+            font-size: 30px;
+            color: #ffffff;
+            margin-bottom: 5px;
+            margin-left: 1%; 
+        }
+
+        .header .single-content {
+            text-align: left;
+            color: #be830e;
+            font-size: 50px;
+            margin-bottom: 30px;
+            margin-left: 20%;
+            margin-right: 15%;
+            visibility: hidden;
+        }
+
+        .content-container {
+            position: relative;
+            padding-left: 20%;
+            margin-bottom: 30px;
+            margin-right: 20%;
+        }
+
+        .content-container::before {
+            content: '';
+            position: absolute;
+            left: 15%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #be830e;
+        }
+
+        .content-container h1 {
+            margin-left: 10%;
+            font-size: 36px;
+            color: #000000;
+        }
+
+        .content-container h2 {
+            margin-left: 10%;
+            font-size: 28px;
+            color: #be830e;
+        }
+
+        .content-container p {
+            margin-left: 10%;
+            font-size: 18px;
+            color: #000000;
+            line-height: 1.6;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #f4f4f4;
+            position: relative;
+        }
+
+        .footer p {
+            font-size: 20px;
+            color: #be830e;
+            margin-bottom: 20px;
+        }
+
+        .footer a {
+            position: absolute;
+            right: 20%;
+            bottom: 20px;
+        }
+
+        .footer img {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="corner-text">It will be a Journey toward</div>
+    <div class="corner-text">Master of Applied Cybernetics</div>
+    <div class="corner-text">A Journey toward:</div>
+    <div class="single-content" id="single-content">An individual capable of critically thinking about matters from a holistic perspective, with a multidisciplinary knowledge base.</div>
+</div>
+
+<div class="content-container">
+    <h1>Why Master of Applied Cybernetics?</h1>
+    <h2>The Subject in the Field I Am Enthusiastic About</h2>
+    <p>Throughout my academic journey, I have continuously applied different methods across various fields, attempting to discover the connections between things. Whether it was the rudimentary research on the purchasing preferences for food delivery in the beginning, or the later network analysis of criminal connections, seeking relationships between things has always been my passion. Cybernetics, as a discipline that emphasizes the communication between complex systems, requires us to view matters more holistically while studying these connections. Honestly, I was initially unfamiliar with the term "Cybernetics," but after some understanding, I realized that many of the research areas I have been passionate about can be categorized under Cybernetics or approached through the lens of Cybernetics, which fueled my passion for studying Cybernetics.</p>
+    <h2>The Interpretability Cybernetics Emphasizes</h2>
+    <p>Starting with business studies, my early research primarily employed basic methods such as linear regression. At that time, I could often use economic principles to attempt to explain various phenomena in empirical analysis. However, as research methods became more complex, explaining the models became increasingly difficult. Cybernetics, as a discipline that studies the connections within complex systems, emphasizes interpretability, which helps enhance my ability to think critically and independently, thereby improving the interpretability of models. This is crucial for someone like me who not only wants to know what something is but also why it is so.</p>
+    <h2>The Cohort</h2>
+    <p>Attending the online information session in August, I was impressed by the way the committee chooses the cohort. They seek out specific individuals who are well-suited for the program, rather than stripping away each person's unique characteristics and coldly evaluating their skill sets and standardized scores. This selection process allows cohort members to showcase not just their specific skills, but also themselves as individuals, which contributes to the diversity of the cohort. This diversity, in turn, provides different perspectives on matters and fosters inspiration through interdisciplinary and cross-background exchanges.</p>
+    <h1>Why Me?</h1>
+    <h2>A Youth Perspective</h2>
+    <p>At 24 years old, a freshly graduated master's student, I am among the younger applicants and can bring a youthful perspective to the cohort. Although I may lack the professional experience of other cohort members, my interdisciplinary research and study background can help compensate for this to some extent, while also offering my own unique perspective.</p>
+    <h2>Skill Set Well-Suited for Collaboration</h2>
+    <p>With a skill set that includes mathematics, economics, machine learning, and data science, I am able to provide support to cohort members who have creative ideas but may face challenges in implementation. Additionally, I can collaborate effectively with others in group research projects, allowing everyone to leverage their strengths without worrying about the demands in mathematics or computing.</p>
+    <h2>Proven Interdisciplinary Abilities and an Ever-Present Desire to Learn More</h2>
+    <p>In my past academic experiences, I have proven my ability to learn across disciplines and to withstand the pressures of studying in new fields, which is crucial for a comprehensive and inclusive discipline like Cybernetics. This is complemented by my deep and enduring desire to learn, which not only drives my continuous personal growth but also equips me to effectively adapt to the evolving nature of Cybernetics as it undergoes continuous redefinition in the modern era.</p>
+</div>
+
+<div class="footer">
+    <p>This is the end of my portfolio.</p>
+    <p>Thank you for patiently reading.</p>
+    <p>Warmly invite you to visit my LinkedIn profile for more information!</p>
+    <a href="https://www.linkedin.com/in/yue-zheng-2353b4294/" target="_blank">
+        <img src="linkedin.png" alt="LinkedIn">
+    </a>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const textElement = document.getElementById("single-content");
+        const text = textElement.textContent;
+        textElement.textContent = "";
+        textElement.style.visibility = "visible";
+
+        let index = 0;
+
+        function typeWriter() {
+            if (index < text.length) {
+                textElement.textContent += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, 50);
+            }
+        }
+
+        typeWriter();
+    });
+</script>
+
+</body>
+</html>
